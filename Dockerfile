@@ -15,7 +15,7 @@ RUN yum -y update
 
 # php && httpd
 #RUN yum -y install mod_php71w php71w-opcache php71w-cli php71w-common php71w-gd php71w-intl php71w-mbstring php71w-mcrypt php71w-mysql php71w-mssql php71w-pdo php71w-pear php71w-soap php71w-xml php71w-xmlrpc
-RUN yum -y install php72 php72-php php72-php-opcache php72-php-bcmath php72-php-cli php72-php-common php72-php-gd php72-php-intl php72-php-json php72-php-mbstring php72-php-pdo php72-php-pdo-dblib php72-php-pear php72-php-pecl-mcrypt php72-php-xmlrpc php72-php-xml php72-php-mysql php72-php-soap httpd
+RUN yum -y install php72 php72-php php72-php-opcache php72-php-bcmath php72-php-cli php72-php-common php72-php-gd php72-php-intl php72-php-json php72-php-mbstring php72-php-pdo php72-php-pdo-dblib php72-php-pear php72-php-pecl-mcrypt php72-php-xmlrpc php72-php-xml php72-php-mysql php72-php-soap php72-php-pecl-zip httpd
 
 # tools
 RUN yum -y install epel-release iproute at curl crontabs git
