@@ -28,7 +28,8 @@ RUN curl -O https://dl-ssl.google.com/dl/linux/direct/mod-pagespeed-stable_curre
  && php72 composer-setup.php --install-dir=bin --filename=composer \
  && php72 -r "unlink('composer-setup.php');" \
  && rm -rf /etc/localtime \
- && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+ && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime \
+ && ln -s /bin/php72 /bin/php
 
 # we want some config changes
 COPY config/50-php_settings.ini /etc/opt/remi/php72/php.d/
