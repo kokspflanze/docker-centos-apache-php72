@@ -24,9 +24,9 @@ RUN yum -y install epel-release iproute at curl crontabs git
 RUN curl -O https://dl-ssl.google.com/dl/linux/direct/mod-pagespeed-stable_current_x86_64.rpm \
  && rpm -U mod-pagespeed-*.rpm \
  && yum clean all \
- && php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
- && php composer-setup.php --install-dir=bin --filename=composer \
- && php -r "unlink('composer-setup.php');" \
+ && php72 -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
+ && php72 composer-setup.php --install-dir=bin --filename=composer \
+ && php72 -r "unlink('composer-setup.php');" \
  && rm -rf /etc/localtime \
  && ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 
