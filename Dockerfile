@@ -1,11 +1,11 @@
-FROM centos:latest
+FROM centos:centos8
 
 MAINTAINER "KoKsPfLaNzE" <kokspflanze@protonmail.com>
 
 ENV container docker
 
-RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm \
- && rpm -Uvh https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm \
+ && rpm -Uvh https://rpms.remirepo.net/enterprise/remi-release-8.rpm
 
 # normal updates
 RUN yum -y update
